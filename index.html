@@ -266,10 +266,11 @@
                     <tbody>
                         <tr>
                             <td class="media-cell">
-                                <audio controls preload="none" aria-label="Desert Echoes audio track">
-                                    <source src="asset/music/Desert Echoes.mp3" type="audio/mpeg">
-                                    <p>無法載入音訊。請確認檔案路徑和名稱是否正確。</p>
+                                <audio controls preload="metadata" aria-label="Desert Echoes audio track">
+                                    <source src="asset\music\Desert Echoes.mp3" type="audio/mp3">
+                                    <p>無法載入音訊。</p>
                                 </audio>
+                                
                             </td>
                             <td class="media-cell">
                                 <video controls preload="metadata" aria-label="Fly High video">
@@ -331,13 +332,5 @@
             </table>
         </div>
     </footer>
-    
-    <script>
-        function init() {
-            console.log("前端作品集載入完成。已修正媒體路徑格式。");
-        }
-
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
 </body>
 </html>
