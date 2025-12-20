@@ -161,12 +161,22 @@
             margin: 0 auto;
         }
 
+        /* --- 修正 iframe 設定 --- */
         iframe {
             max-width: 100%;
-            height: 400px;
             width: 100%;
             border: 0;
             margin-top: var(--spacing-lg);
+        }
+
+        /* 預設 iframe 高度 */
+        iframe:not(#game-frame) {
+            height: 400px;
+        }
+
+        /* 專門給遊戲的高度，確保按鈕不被切掉 */
+        #game-frame {
+            height: 720px; 
         }
         
         @media (min-width: 768px) {
@@ -185,6 +195,8 @@
             .media-table thead, .media-table tbody, .media-table tr, .media-table th, .media-table td { display: block; width: 100%; }
             .media-table th { text-align: center; border-bottom: none; }
             .media-table td { border-top: none; border-bottom: 1px solid #838080; padding-bottom: var(--spacing-md); text-align: center; }
+            /* 手機版遊戲高度微調 */
+            #game-frame { height: 780px; }
         }
     </style>
 </head>
@@ -269,10 +281,9 @@
                         <tr>
                             <td class="media-cell">
                                 <audio controls preload="metadata" aria-label="Desert Echoes audio track">
-                                    <source src="asset\music\Desert Echoes.mp3" type="audio/mp3">
+                                    <source src="asset/music/Desert Echoes.mp3" type="audio/mp3">
                                     <p>無法載入音訊。</p>
                                 </audio>
-                                
                             </td>
                             <td class="media-cell">
                                 <video controls preload="metadata" aria-label="Fly High video">
@@ -305,12 +316,10 @@
             <div class="clearfix" style="margin-left: 20px;">
                 <p>這是我的 Gemini Canvas 遊戲作品！請在下方遊玩：</p>
                 <iframe 
+                    id="game-frame"
                     src="game.html" 
-                    width="95%" 
-                    height="680" 
-                    frameborder="0" 
-                    allowfullscreen 
-                    style="display: block; margin: 20px 0;">
+                    title="洪君瑞貪食蛇"
+                    allowfullscreen>
                 </iframe>
             </div>
             <hr>
@@ -340,7 +349,7 @@
                 <figure>
                     <img src="asset/image/S__158244868_0.jpg" alt="Flutter 應用個人名片截圖" loading="lazy">
                     <figcaption>個人名片</figcaption>
-                </figure>         
+                </figure>         
             </section>
         </article>
 
@@ -349,7 +358,7 @@
             <p>建議攜帶筆記本與筆，方便隨時記錄課堂中的關鍵知識點與靈感。</p>
         </details>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0116640523096!2d121.54228437648206!3d25.03541624233777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a98f107f9175%3a0x28f731c34a413d96!2z5ZyL56uL5L-d6auY5qCh56iy5p2-5qCh!5e0!3m2!1szh-TW!2stw!4v1703901967204!5m2!1szh-TW!2stw" 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3615.146!2d121.543!3d25.024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a98f79f061d3%3A0x72a44f95d85ec157!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1700000000000" 
             title="國立台北教育大學地圖" 
             allowfullscreen="" 
             loading="lazy" 
