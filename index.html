@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>君瑞's Blog </title>
+    <title>君瑞's Blog</title>
     
     <style>
         :root {
@@ -65,7 +65,9 @@
             margin-bottom: var(--spacing-md);
         }
 
-        header { background-color: var(--color-background); }
+        header {
+            background-color: var(--color-background);
+        }
         nav {
             display: flex;
             flex-wrap: wrap;
@@ -106,21 +108,51 @@
             border-radius: 50%;
             margin-bottom: var(--spacing-sm);
         }
-        .profile-text { text-align: center; }
+        .profile-text {
+            text-align: center;
+        }
 
-        .table-wrapper { overflow-x: auto; margin-top: var(--spacing-sm); }
-        table { border-collapse: collapse; min-width: 400px; width: 100%; }
-        th, td { border: 1px solid #838080; padding: var(--spacing-sm); text-align: left; }
-        th { background-color: #f0f0f0; font-weight: bold; }
+        .table-wrapper {
+            overflow-x: auto; 
+            margin-top: var(--spacing-sm);
+        }
+        table {
+            border-collapse: collapse;
+            min-width: 400px;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #838080;
+            padding: var(--spacing-sm);
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
         
-        .gallery-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: var(--spacing-md);
+        }
+
         .gallery-grid figure {
-            margin: 0; padding: var(--spacing-sm);
-            background-color: white; border-radius: var(--border-radius-sm);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;
+            margin: 0;
+            padding: var(--spacing-sm);
+            background-color: white;
+            border-radius: var(--border-radius-sm);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .gallery-grid img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
 
         .media-table audio, .media-table video {
             max-width: 100%; 
@@ -129,9 +161,15 @@
             margin: 0 auto;
         }
 
-        iframe { max-width: 100%; width: 100%; border: 0; margin-top: var(--spacing-lg); }
-        iframe:not(#game-frame) { height: 400px; }
-        #game-frame { height: 720px; }
+        iframe.map-frame {
+            max-width: 100%;
+            height: 450px;
+            width: 100%;
+            border: 0;
+            margin-top: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
         
         @media (min-width: 768px) {
             nav a { flex: 0 1 auto; margin: 0 var(--spacing-xs); }
@@ -149,7 +187,6 @@
             .media-table thead, .media-table tbody, .media-table tr, .media-table th, .media-table td { display: block; width: 100%; }
             .media-table th { text-align: center; border-bottom: none; }
             .media-table td { border-top: none; border-bottom: 1px solid #838080; padding-bottom: var(--spacing-md); text-align: center; }
-            #game-frame { height: 780px; }
         }
     </style>
 </head>
@@ -182,36 +219,6 @@
                     </p>
                 </div>
             </section>
-            <section>
-                <p>我是一個資科系學生，目前學了<mark>Java</mark> 、 <mark>Python 程式設計</mark>、<mark>C++</mark> 、 <mark>HTML </mark>，還有自學過<mark>Flutter</mark>和<mark>dart</mark>，對於這些內容我相當感興趣</p>
-                <p>此外，我也喜歡玩遊戲、音樂與看影片，喜歡勞逸結合做事。</p>
-            </section>
-        </article>
-
-        <article id="section2">
-            <header><h2 id="title">工作經歷</h2></header>
-            <section class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr><th>Dates</th><th>Work</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>2025/7 ~ 2025/11</td><td>補習班輔導老師</td></tr>
-                    </tbody>
-                </table>
-            </section>
-        </article>
-
-        <article id="section3">
-            <header><h2 id="title">工作技能</h2></header>
-            <section class="table-wrapper">
-                <table>
-                    <tr><td>Java</td><td>⭐⭐</td></tr>
-                    <tr><td>C++</td><td>⭐⭐</td></tr>
-                    <tr><td>Python</td><td>⭐</td></tr>
-                    <tr><td>Flutter</td><td>⭐⭐</td></tr>
-                </table>
-            </section>
         </article>
 
         <article id="section4">
@@ -227,15 +234,15 @@
                     <tbody>
                         <tr>
                             <td class="media-cell">
-                                <audio controls preload="metadata">
+                                <audio controls preload="auto">
                                     <source src="asset/music/Desert_Echoes.mp3" type="audio/mpeg">
-                                    <p>無法載入音訊。</p>
+                                    您的瀏覽器不支援播放此音訊。
                                 </audio>
                             </td>
                             <td class="media-cell">
-                                <video controls preload="metadata" aria-label="Fly High video">
-                                    <source src="asset/video/Fly High 資科男排ver. 【排球少年第二季OP 2】 (2).mp4" type="video/mp4">
-                                    <p>無法載入視訊。</p>
+                                <video controls preload="metadata">
+                                    <source src="asset/video/Fly%20High%20資科男排ver.%20【排球少年第二季OP%202】%20(2).mp4" type="video/mp4">
+                                    您的瀏覽器不支援播放此影片。
                                 </video>
                             </td>
                         </tr>
@@ -246,66 +253,18 @@
 
         <article id="section4_5">
             <header><h2 id="title">我的 AI 生成小影片</h2></header>
-            <div class="clearfix" style="margin-left: 20px;">
-                <p>這是我的 AI 生成作品，歡迎觀看：</p>
-                <iframe 
-                    src="https://www.youtube.com/embed/7_WX61Mj7LA" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/7_WX61Mj7LA" frameborder="0" allowfullscreen></iframe>
         </article>
 
         <article id="section5">
             <h2 id="title">互動小遊戲</h2>
-            <div class="clearfix" style="margin-left: 20px;">
-                <p>這是我的 Gemini Canvas 遊戲作品！請在下方遊玩：</p>
-                <iframe id="game-frame" src="game.html" title="洪君瑞貪食蛇" allowfullscreen></iframe>
-            </div>
-            <hr>
+            <iframe src="game.html" width="95%" height="680" frameborder="0" allowfullscreen></iframe>
         </article>
 
-        <article id="section6">
-            <header><h2 id="title">日常照片集</h2></header>
-            <section class="gallery-grid">
-                <figure>
-                    <img src="asset/image/77B125F3-47FB-4420-BA6A-870C6F58295B.jpg" alt="國北聖誕樹照片" loading="lazy">
-                    <figcaption>國北聖誕樹</figcaption>
-                </figure>
-                <figure>
-                    <img src="asset/image/2FF08F46-1B54-4B9D-AA8A-78A0CBF9B3F7.png" alt="遊戲畫面截圖" loading="lazy">
-                    <figcaption>開心遊戲!!!!</figcaption>
-                </figure>
-            </section>
-        </article>
-
-        <article id="section7">
-            <header><h2 id="title">更多資訊 ⮕ Flutter 實作</h2></header>
-            <section class="gallery-grid">
-                <figure>
-                    <img src="asset/image/S__158244867_0.jpg" alt="Flutter 應用滑動頁面截圖" loading="lazy">
-                    <figcaption>滑動頁面實作</figcaption>
-                </figure>
-                <figure>
-                    <img src="asset/image/S__158244868_0.jpg" alt="Flutter 應用個人名片截圖" loading="lazy">
-                    <figcaption>個人名片</figcaption>
-                </figure>         
-            </section>
-        </article>
-
-        <details style="margin-top: var(--spacing-lg);">
-            <summary>點擊查看學習提示</summary>
-            <p>建議攜帶筆記本與筆，方便隨時記錄課堂中的關鍵知識點與靈感。</p>
-        </details>
-
+        <h2 id="title" style="margin-top: 30px;">校園地圖</h2>
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.1112!2d121.5422501!3d25.0218136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9629705a967%3A0x63d0859676e93ca9!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1716388000000!5m2!1szh-TW!2stw" 
-            title="國立台北教育大學地圖" 
-            width="100%"   
-            height="450" 
-            style="border:0;" 
+            class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.1582260656!2d121.54228967605481!3d25.02871023850552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96931201d71%3A0x6b47379f046b8f52!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn6Zga!5e0!3m2!1szh-TW!2stw!4v1700000000000" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
@@ -313,12 +272,20 @@
     </main>
     
     <footer>
-        <div class="table-wrapper" style="margin-top: var(--spacing-lg);">
+        <div class="table-wrapper">
             <table>
                 <tr><td>聯絡我們</td><td>s111316012@stu.ntue.edu.tw</td></tr>
                 <tr><td>最後更新日期</td><td>2024年11月30日</td></tr>
             </table>
         </div>
     </footer>
+
+    <script>
+        const audio = document.querySelector('audio');
+        audio.addEventListener('error', function(e) {
+            console.error("音樂載入失敗！請檢查路徑是否為 asset/music/Desert_Echoes.mp3");
+            console.error("目前的錯誤代碼:", audio.error.code);
+        });
+    </script>
 </body>
 </html>
